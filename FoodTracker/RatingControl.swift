@@ -15,6 +15,10 @@ class RatingControl: UIView {
     var rating = 0
     
     var ratingButtons = [UIButton]()
+    
+    let spacing = 5
+    
+    let starCount = 5
 
     //MARK: Initialization
     
@@ -24,7 +28,7 @@ class RatingControl: UIView {
         //offset each button's origin by the lenght of the button plus spacing
         for(index, button) in ratingButtons.enumerated() {
             
-            buttonFrame.origin.x = CGFloat(index * (44+5))
+            buttonFrame.origin.x = CGFloat(index * (44 + spacing))
             button.frame = buttonFrame
             
         }
@@ -35,7 +39,7 @@ class RatingControl: UIView {
         
         super.init(coder: aDecoder)
         
-        for _ in 0..<5 {
+        for _ in 0..<starCount {
         //create a red button
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
         
