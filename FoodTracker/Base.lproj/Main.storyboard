@@ -74,7 +74,7 @@
             </objects>
             <point key="canvasLocation" x="1076" y="138.98050974512745"/>
         </scene>
-        <!--Meal Table View Controller-->
+        <!--Your Meals-->
         <scene sceneID="Zxc-VE-Yox">
             <objects>
                 <tableViewController id="o49-Pa-i3n" customClass="MealTableViewController" customModule="FoodTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -123,7 +123,9 @@
                             <outlet property="delegate" destination="o49-Pa-i3n" id="N2a-oO-n0c"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="LXM-lu-2po"/>
+                    <navigationItem key="navigationItem" title="Your Meals" id="LXM-lu-2po">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Rp4-yf-pOy"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggF-Pp-Pzx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
