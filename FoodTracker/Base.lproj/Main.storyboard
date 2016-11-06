@@ -22,7 +22,7 @@
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="81" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CHX-Ax-454">
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="400" placeholderIntrinsicHeight="31" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vfn-uJ-yPH">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vfn-uJ-yPH">
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -38,11 +38,16 @@
                                     </imageView>
                                     <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="qgG-7k-GpB" customClass="RatingControl" customModule="FoodTracker">
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="fOV-II-B31"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="qgG-7k-GpB" firstAttribute="top" secondItem="T41-uR-CGr" secondAttribute="bottom" constant="10" id="1nf-wX-rnS"/>
                                     <constraint firstItem="qgG-7k-GpB" firstAttribute="leading" secondItem="CHX-Ax-454" secondAttribute="leading" constant="51" id="PBi-Bl-mHu"/>
                                     <constraint firstAttribute="trailing" secondItem="qgG-7k-GpB" secondAttribute="trailing" constant="51" id="Pfb-qO-A7s"/>
+                                    <constraint firstItem="T41-uR-CGr" firstAttribute="top" secondItem="Vfn-uJ-yPH" secondAttribute="bottom" constant="10" id="YmQ-eH-tA6"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -52,7 +57,7 @@
                             <constraint firstItem="CHX-Ax-454" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ryo-C3-xwZ"/>
                             <constraint firstItem="CHX-Ax-454" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WVc-ox-Is7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CHX-Ax-454" secondAttribute="trailing" id="WkY-LX-5VO"/>
-                            <constraint firstItem="CHX-Ax-454" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="bS8-EQ-SRz"/>
+                            <constraint firstItem="CHX-Ax-454" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="bS8-EQ-SRz"/>
                             <constraint firstItem="CHX-Ax-454" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bjj-SK-ynY"/>
                             <constraint firstItem="CHX-Ax-454" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cD0-Yd-vil"/>
                             <constraint firstItem="CHX-Ax-454" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="k5U-4H-0ch"/>
@@ -61,15 +66,21 @@
                     </view>
                     <navigationItem key="navigationItem" title="New Meal" id="QYb-xR-GZ1">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="z2z-oX-FmB"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="x3T-fj-Oxk"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="x3T-fj-Oxk">
+                            <connections>
+                                <segue destination="M5P-wd-ofn" kind="unwind" unwindAction="unwindToMealListWithSender:" id="w6v-ZX-Ue2"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="nameTextField" destination="Vfn-uJ-yPH" id="vQS-v7-7Fs"/>
                         <outlet property="photoImageView" destination="T41-uR-CGr" id="fKM-A8-j6i"/>
                         <outlet property="ratingControl" destination="qgG-7k-GpB" id="JZp-If-hiu"/>
+                        <outlet property="saveButton" destination="x3T-fj-Oxk" id="2Ob-rs-BUe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="M5P-wd-ofn" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="xtr-Yp-0dZ">
                     <connections>
                         <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="8O1-Ic-QaM"/>
