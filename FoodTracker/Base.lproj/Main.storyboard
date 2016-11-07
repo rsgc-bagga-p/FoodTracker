@@ -20,9 +20,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="81" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="CHX-Ax-454">
+                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="81" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="CHX-Ax-454">
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vfn-uJ-yPH">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vfn-uJ-yPH">
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -44,10 +44,10 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="qgG-7k-GpB" firstAttribute="top" secondItem="T41-uR-CGr" secondAttribute="bottom" constant="10" id="1nf-wX-rnS"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vfn-uJ-yPH" secondAttribute="trailing" id="3ed-oB-0JY"/>
                                     <constraint firstItem="qgG-7k-GpB" firstAttribute="leading" secondItem="CHX-Ax-454" secondAttribute="leading" constant="51" id="PBi-Bl-mHu"/>
                                     <constraint firstAttribute="trailing" secondItem="qgG-7k-GpB" secondAttribute="trailing" constant="51" id="Pfb-qO-A7s"/>
-                                    <constraint firstItem="T41-uR-CGr" firstAttribute="top" secondItem="Vfn-uJ-yPH" secondAttribute="bottom" constant="10" id="YmQ-eH-tA6"/>
+                                    <constraint firstItem="Vfn-uJ-yPH" firstAttribute="leading" secondItem="CHX-Ax-454" secondAttribute="leading" id="kHE-ee-aaf"/>
                                 </constraints>
                             </stackView>
                         </subviews>
